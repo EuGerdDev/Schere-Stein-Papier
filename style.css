@@ -1,0 +1,145 @@
+/* Grundgestaltung im Duolingo-Stil (hell, sauber, freundlich) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "DIN Next Rounded LT Pro", "Nunito", "Segoe UI", sans-serif;
+    background-color: #ffffff;
+    color: #3c3c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Die zentrale Spielekarte */
+.duo-card {
+    width: 90%;
+    max-width: 420px;
+    border: 2px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+/* Kopfbereich mit Streak */
+.duo-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 15px;
+}
+
+.duo-streak {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff9600; /* Original Duolingo-Orange für Streaks */
+}
+
+.duo-status {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #3c3c3c;
+    text-align: center;
+}
+
+/* Duell-Boxen */
+.duo-battleground {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.duo-box {
+    flex: 1;
+    border: 2px solid #e5e5e5;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.box-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    color: #afafaf;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.box-emoji {
+    font-size: 2.5rem;
+}
+
+/* Button-Gruppe */
+.duo-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Der ikonische Duolingo-3D-Button */
+.duo-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: filter 0.2s;
+    outline: none;
+    
+    /* Basis-3D-Effekt über border und box-shadow */
+    border: 2px solid #58cc02;
+    background-color: #58cc02; /* Duolingo-Grün */
+    color: #ffffff;
+    box-shadow: 0 4px 0 #46a302;
+    transform: translateY(0);
+}
+
+/* Hover-Effekt (leicht aufhellen) */
+.duo-btn:hover {
+    filter: brightness(1.05);
+}
+
+/* Der Herunterdrück-Effekt (Klick) */
+.duo-btn:active {
+    box-shadow: 0 0px 0 #46a302;
+    transform: translateY(4px);
+}
+
+/* Individuelle Farben für die verschiedenen Optionen (Duolingo nutzt oft Blau und Orange) */
+.btn-schere {
+    background-color: #1cb0f6; /* Duolingo-Blau */
+    border-color: #1cb0f6;
+    box-shadow: 0 4px 0 #1899d6;
+}
+.btn-schere:active { box-shadow: 0 0px 0 #1899d6; }
+
+.btn-stein {
+    background-color: #ff9600; /* Duolingo-Orange */
+    border-color: #ff9600;
+    box-shadow: 0 4px 0 #e08400;
+}
+.btn-stein:active { box-shadow: 0 0px 0 #e08400; }
+
+.btn-papier {
+    background-color: #ff4b4b; /* Duolingo-Rot */
+    border-color: #ff4b4b;
+    box-shadow: 0 4px 0 #ea2b2b;
+}
+.btn-papier:active { box-shadow: 0 0px 0 #ea2b2b; }
+.duo-hearts {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 20px;
+    left: 45%;
+}
+
