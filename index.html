@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schere Stein Papier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="duo-hearts" id="hearts-container">5 ❤️</span>
+    <div class="duo-card">
+        <!-- Fortschritts- / Streakbereich oben -->
+        <div class="duo-header">
+            <span class="duo-status" id="playerstatus">Wähle dein Element!</span>
+            <span class="duo-streak">🔥 <span id="winstreak">0</span></span>
+        </div>
+        
+        <!-- Spielfeld in der Mitte -->
+        <div class="duo-battleground">
+            <div class="duo-box">
+                <span class="box-label">COMPUTER</span>
+                <div class="box-emoji" id="computerdecision">❓</div>
+            </div>
+            <div class="duo-box">
+                <span class="box-label">DU</span>
+                <div class="box-emoji" id="playerdecision">❓</div>
+            </div>
+        </div>
+
+        <!-- Die typischen Duolingo-Buttons unten -->
+        <div class="duo-button-group">
+            <button class="duo-btn btn-schere" onclick="choose(0)">✂️ Schere</button>
+            <button class="duo-btn btn-stein" onclick="choose(1)">🪨 Stein</button>
+            <button class="duo-btn btn-papier" onclick="choose(2)">📄 Papier</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
